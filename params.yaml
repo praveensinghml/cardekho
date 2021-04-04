@@ -1,0 +1,32 @@
+base:
+  project: Car Dekho
+  random_state: 42
+  target_col: Selling_Price
+
+data_source:
+  s3_source: data_given/car_data.csv
+
+load_data:
+  raw_dataset_csv: data/raw/car_data.csv
+
+preprocess:
+  current_year: 2021
+  processed_dataset_csv: data/raw/udatedCar_data.csv
+
+split_data:
+  train_path: data/processed/train_car_data.csv
+  test_path: data/processed/test_car_data.csv
+  test_size: 0.2
+
+estimators:
+  ElasticNet:
+    params:
+      alpha: 0.9
+      l1_ratio: 0.4
+model_dir: saved_models
+
+reports:
+  params: report/params.json
+  scores: report/scores.json
+
+webapp_model_dir: prediction_service/model/model.joblib
