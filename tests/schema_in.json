@@ -1,0 +1,35 @@
+{
+    "Year": {
+        "min": 1976,
+        "max": 2021
+    },
+    "Selling_Price": {
+        "min": 0.1,
+        "max": 100
+    },
+    "Present_Price": {
+        "min": 0.1,
+        "max": 100
+    },
+    "Kms_Driven": {
+        "min": 0,
+        "max": 180000
+    },
+    "Fuel_Type": {
+        "1": "Petrol",
+        "2": "Diesel",
+        "3": "CNG"
+    },
+    "Seller_Type": {
+        "1": "Dealer",
+        "2": "Individual"
+    },
+    "Transmission": {
+        "1": "Manual",
+        "2": "Automatic"
+    },
+    "Owner": {
+        "min": 0,
+        "max": 5
+    }
+}

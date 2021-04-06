@@ -4,7 +4,7 @@ stages:
     cmd: python src/load_data.py --config=params.yaml
     deps:
     - path: data_given/car_data.csv
-      md5: 94d08bd3cf46e3266ad41d935780a5bb
+      md5: 8ec9b5799d3948d3f30693396fcb8d4f
       size: 17209
     - path: src/get_data.py
       md5: db7730736da9e3274083bc90eccf7000
@@ -14,26 +14,26 @@ stages:
       size: 758
     outs:
     - path: data/raw/car_data.csv
-      md5: 0958686e6b93759b272d6f2a84639c25
+      md5: ce2657ba650623a8ef689ae2dd7d42c5
       size: 17275
   preprocessing:
     cmd: python src/preprocessing.py --config=params.yaml
     deps:
     - path: data_given/car_data.csv
-      md5: 94d08bd3cf46e3266ad41d935780a5bb
+      md5: 8ec9b5799d3948d3f30693396fcb8d4f
       size: 17209
     - path: src/get_data.py
       md5: db7730736da9e3274083bc90eccf7000
       size: 682
     outs:
     - path: data/raw/udatedCar_data.csv
-      md5: 09fe0a7d5454d47997dd795e8c40ec2c
+      md5: 5712cc11e895714536d6085d77af2d03
       size: 8750
   split_data:
     cmd: python src/split_data.py --config=params.yaml
     deps:
     - path: data/raw/udatedCar_data.csv
-      md5: 09fe0a7d5454d47997dd795e8c40ec2c
+      md5: 5712cc11e895714536d6085d77af2d03
       size: 8750
     - path: src/split_data.py
       md5: f64f1a796c0849396c823cee6c3bc553
@@ -43,7 +43,7 @@ stages:
       md5: c39803ee063cb8bf0e059973c6fe7943
       size: 1877
     - path: data/processed/train_car_data.csv
-      md5: 46c73ec404b8c8a025074648ed40aba7
+      md5: 12e1de37028c7c98291d3a0da6ab2ee0
       size: 7005
   train_and_evaluate:
     cmd: python src/train_and_evaluate.py --config=params.yaml
@@ -52,7 +52,7 @@ stages:
       md5: c39803ee063cb8bf0e059973c6fe7943
       size: 1877
     - path: data/processed/train_car_data.csv
-      md5: 46c73ec404b8c8a025074648ed40aba7
+      md5: 12e1de37028c7c98291d3a0da6ab2ee0
       size: 7005
     - path: src/train_and_evaluate.py
       md5: 9cf452c96d1798f1fee947c29231eac9
