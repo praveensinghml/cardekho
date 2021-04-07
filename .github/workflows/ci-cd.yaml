@@ -38,7 +38,7 @@ jobs:
 
     - name: DVC
       env:
-          GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_CREDENTIALS }}
+          GDRIVE_CREDENTIALS: ${{ secrets.GDRIVE_CREDENTIALS }}
       run: |
         dvc pull
         dvc repro
