@@ -1,6 +1,4 @@
 [core]
     remote = storage
-['remote "origin"']
-    url = https://github.com/praveensinghml/cardekho.git
 ['remote "storage"']
     url = gdrive://1XURP0SNpykoma_zIjqvt4b4lbuzbSMtU
