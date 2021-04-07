@@ -37,6 +37,8 @@ jobs:
         pytest -v
 
     - name: DVC
+      env:
+          GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_CREDENTIALS }}
       run: |
         dvc pull
         dvc repro
