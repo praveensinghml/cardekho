@@ -36,10 +36,6 @@ jobs:
       run: |
         pytest -v
 
-    - name: DVC
-      run: |
-        dvc pull
-        dvc repro
 
     - name: Deploy to Heroku
       env:
